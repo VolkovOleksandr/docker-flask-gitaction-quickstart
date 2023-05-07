@@ -1,0 +1,13 @@
+version: '3'
+services:
+  deployment:
+    container_name: test-app
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - '4000:5003'
+    volumes:
+      - .:/app
+    environment:
+      - ENV=dev
