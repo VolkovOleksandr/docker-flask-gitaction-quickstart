@@ -1,17 +1,21 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 import os
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-env", type=str, default="dev")
 
 application = Flask(__name__)
 application.config['JSON_SORT_KEYS'] = False
 CORS(application)
 
-environment = os.getenv('ENV')
+environment = parser.parse_args().env
 
 # Root endpoint
 @application.route('/', methods=['GET'])
 def root():
-    return jsonify({f"REST APIs - {environment} environment": "v1.0"})
+    return jsonify({f"Docker REST APIs - {environment} environment": "v1.0"})
 
 if __name__ == "__main__":
     if environment == "dev":

@@ -9,5 +9,3 @@ services:
       - '4000:5003'
     volumes:
       - .:/app
-    environment:
-      - ENV=dev
