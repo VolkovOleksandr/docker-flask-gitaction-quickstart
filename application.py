@@ -15,7 +15,7 @@ environment = parser.parse_args().env
 # Root endpoint
 @application.route('/', methods=['GET'])
 def root():
-    return jsonify({f"Docker REST APIs - {environment} environment": "v1.0"})
+    return jsonify({f"Docker - REST APIs - {environment} environment": "v1.0"})
 
 if __name__ == "__main__":
     if environment == "dev":
