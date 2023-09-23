@@ -9,3 +9,4 @@ services:
       - '4000:5003'
     volumes:
       - .:/app
+      - /env

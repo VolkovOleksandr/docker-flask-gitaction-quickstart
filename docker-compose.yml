@@ -6,6 +6,4 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - '4000:5000'
-    environment:
-      - ENV=prod
+      - '8080:8080'

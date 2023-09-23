@@ -6,6 +6,6 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-EXPOSE 4000
+EXPOSE 8080
 
 CMD ["python", "application.py", "-env=prod"]
