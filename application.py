@@ -21,5 +21,6 @@ if __name__ == "__main__":
     if environment == "dev":
         application.run(debug=True, host='0.0.0.0', port=5003)
     else:
-        from waitress import serve
-        serve(application, host="0.0.0.0", port=8080)
+        # from waitress import serve
+        # serve(application, host="0.0.0.0", port=8080)
+        application.run(host='0.0.0.0', port=5000)
